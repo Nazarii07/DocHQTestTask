@@ -1,6 +1,9 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Button} from '@material-ui/core';
+import Image from "next/image";
+import subtractPopular from '../../../public/subtractPopular.png';
+import subtractBasic from '../../../public/subtract.png';
 
 const useStyles = makeStyles((theme) => ({
   cardContainer:{
@@ -36,10 +39,19 @@ const useStyles = makeStyles((theme) => ({
 
   },
   price:{
-
+    marginBottom: props => props.isPerTimeframe ? '40px' : '90px'
+    
   },
   perTimeframe:{
-
+    marginBottom: '24px'
+  },
+  optionBox:{
+    display: 'flex',
+    alignItems: 'center',
+    marginBottom: '14px'
+  },
+  optionTitle:{
+    marginLeft: '11px'
   },
   customButton:{
     maxWidth: '165px',
@@ -48,6 +60,7 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '25px 25px 0 25px',
     color: props => props.isMostPopular ? '#fff' : '#222B35',
     backgroundColor: props => props.isMostPopular ? '#FF005C' : '#fff',
+    marginTop: '22px'
   }
 }));
 
@@ -61,7 +74,7 @@ export const CostCard = ({
   isMostPopular,
   programOptions,
 }) => {
-    const classes = useStyles({isMostPopular});
+    const classes = useStyles({isMostPopular, isPerTimeframe});
     
     return (
       <Box className={classes.cardContainer}>
@@ -77,7 +90,7 @@ export const CostCard = ({
             {title}
           </Typography>
           <Typography className={classes.price}>
-            {price}
+            £{price}
           </Typography>
           {isPerTimeframe &&
             <Typography className={classes.perTimeframe}>
@@ -87,9 +100,24 @@ export const CostCard = ({
          <Box>
             {programOptions.map((item, index) => {
               return(
-                <Box key={index} >
-                  img
-                  <Typography>
+                <Box key={index} className={classes.optionBox}>
+                  {isMostPopular ?
+                   <Image
+                    src="/subtractPopular.png"
+                    alt="subtractPopular"
+                    width={20}
+                    height={20}
+                    priority
+                  /> : 
+                  <Image
+                    src="/subtract.png"
+                    alt="subtract"
+                    width={20}
+                    height={20}
+                    priority
+                  />
+                  }
+                  <Typography className={classes.optionTitle}>
                     {item}
                   </Typography>
                 </Box>
@@ -100,7 +128,7 @@ export const CostCard = ({
           variant="contained"
           className={classes.customButton}
          >
-            Disabled
+            Lorem
         </Button>
         </Box>
       </Box>

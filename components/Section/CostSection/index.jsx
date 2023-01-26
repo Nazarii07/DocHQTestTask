@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography} from '@material-ui/core';
 import {CostCard} from '../../Cards/CostsCard';
 
+
 const useStyles = makeStyles((theme) => ({
   sectionContainer:{
     paddingTop: '145px',
@@ -19,8 +20,8 @@ const useStyles = makeStyles((theme) => ({
 
 const costData = [
   {title: 'Plan 1', isPerTimeframe: false, price: 30, isMostPopular: false, programOptions:['Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus'] },
-  {title: 'Plan 1', isPerTimeframe: true, price: 45, isMostPopular: true, programOptions:['Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus'] },
-  {title: 'Plan 1', isPerTimeframe: true, price: 60, isMostPopular: false, programOptions:['Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus'] },
+  {title: 'Plan 2', isPerTimeframe: true, price: 45, isMostPopular: true, programOptions:['Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus'] },
+  {title: 'Plan 3', isPerTimeframe: true, price: 60, isMostPopular: false, programOptions:['Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus', 'Curabitur blandit tempus'] },
 ]
 
 
