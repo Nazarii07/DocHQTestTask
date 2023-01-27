@@ -15,6 +15,10 @@ const useStyles = makeStyles((theme) => ({
     color: '#222B35',
   },
   title: {
+    fontFamily: 'Montserrat',
+    fontWeight: 400,
+    fontSize: '12px',
+    lineHeight: '30px',
     color: "#000000",
   },
   menuConainer:{

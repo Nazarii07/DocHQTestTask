@@ -1,13 +1,10 @@
 import Head from 'next/head'
-import { Montserrat, Open_Sans } from '@next/font/google'
 import {Header} from '../components/Header'
 import {SubHeader} from '../components/SubHeader'
 import {PlanSection} from '../components/Section/PlanSection'
 import {CostSection} from '../components/Section/CostSection'
 import {Grid} from '@material-ui/core'
-
-const montserrat = Montserrat({ subsets: ['latin'] })
-const openSans = Open_Sans({ subsets: ['latin'] })
+import { GridItem } from '@/components/Containers'
 
 export default function Home() {
   return (
@@ -18,20 +15,20 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${montserrat.className} ${openSans.className}`} style={{maxWidth:'1440px'}}>
+      <main style={{maxWidth:'1440px', margin: '0 auto'}}>
         <Grid container >
-          <Grid item xs={12}>
+          <GridItem>
             <Header/>
-          </Grid>
-          <Grid item xs={12}>
+          </GridItem>
+          <GridItem>
             <SubHeader/>
-          </Grid>
-          <Grid item xs={12}>
+          </GridItem>
+          <GridItem>
             <PlanSection/>
-          </Grid>
-          <Grid item xs={12}>
+          </GridItem>
+          <GridItem>
             <CostSection/>
-          </Grid>
+          </GridItem>
         </Grid>
         
       </main>

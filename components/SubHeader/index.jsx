@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography} from '@material-ui/core';
+import { subHeaderData } from '@/constans';
 
 const useStyles = makeStyles((theme) => ({
   subMenuConainer:{
@@ -21,7 +22,11 @@ const useStyles = makeStyles((theme) => ({
     marginRight: "20px"
   },
   subMenuTextTitle:{
-
+    fontFamily: 'Montserrat',
+    fontWeight: 400,
+    fontSize: '12px',
+    lineHeight: '30px',
+    textTransform: 'uppercase'
   },
   menuDots:{
     width: "4px",
@@ -32,23 +37,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-
 export const SubHeader = () => {
     const classes = useStyles();
     
     return (
-              <Box className={classes.subMenuConainer}>
-                <Box className={classes.subMenuSection}>
-                  <Typography className={classes.subMenuTextTitle}>Covid test</Typography>
-                  <Box className={classes.menuDots}/>
-                </Box>
-                <Box className={classes.subMenuSection}>
-                  <Typography className={classes.subMenuTextTitle}>Health app</Typography>
-                  <Box className={classes.menuDots}/>
-                </Box>
-                <Box className={classes.subMenuSection}>
-                  <Typography className={classes.subMenuTextTitle}>Supplements</Typography>
-                </Box>
+      <Box className={classes.subMenuConainer} >
+          {subHeaderData.map((item, index)=>{
+            return(
+              <Box className={classes.subMenuSection} key={index}>
+                <Typography className={classes.subMenuTextTitle}>{item.title}</Typography>
+                {item.dots && <Box className={classes.menuDots}/>}
               </Box>
+            )
+          })}
+       </Box>    
       );
 }

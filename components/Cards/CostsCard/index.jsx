@@ -18,7 +18,14 @@ const useStyles = makeStyles((theme) => ({
     height: '38px',
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center'
+    alignItems: 'center',
+  },
+  mostPopulareTitle:{
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '14px',
+    lineHeight: '17px',
+    textTransform: 'uppercase',
   },
   cardBox:{
     width: '325px',
@@ -34,13 +41,24 @@ const useStyles = makeStyles((theme) => ({
 
   },
   title:{
-
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '18px',
+    lineHeight: '22px',
   },
   price:{
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '60px',
+    lineHeight: '73px',
     marginBottom: props => props.isPerTimeframe ? '40px' : '90px'
     
   },
   perTimeframe:{
+    fontFamily: 'Open_Sans',
+    fontWeight: 600,
+    fontSize: '14px',
+    lineHeight: '26px',
     marginBottom: '24px'
   },
   optionBox:{
@@ -49,6 +67,9 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '14px'
   },
   optionTitle:{
+    fontFamily: 'Open_Sans',
+    fontWeight: 600,
+    fontSize: '13px',
     marginLeft: '11px'
   },
   customButton:{
@@ -58,11 +79,12 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: '25px 25px 0 25px',
     color: props => props.isMostPopular ? '#fff' : '#222B35',
     backgroundColor: props => props.isMostPopular ? '#FF005C' : '#fff',
+    fontFamily: 'Montserrat',
+    fontWeight: 500,
+    fontSize: '14px',
     marginTop: '22px'
   }
 }));
-
-
 
 
 export const CostCard = ({
@@ -78,7 +100,7 @@ export const CostCard = ({
       <Box className={classes.cardContainer}>
         {isMostPopular && 
           <Box className={classes.mostPopulare}>
-            <Typography>
+            <Typography className={classes.mostPopulareTitle}>
               Most popular
             </Typography>
           </Box>

@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme) => ({
     position: 'relative',
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-end',
     alignItems: 'center',
     width: '355px',
     height: '203px',
@@ -18,20 +18,32 @@ const useStyles = makeStyles((theme) => ({
     '&::before': {
       content: '""',
       border: '1px solid transparent',
+      borderRadius: '0 20px 0 20px',
       backgroundImage:  props => `url(${props.bgImg.src})`,
       position: 'absolute',
       top: 0,
       right: 0,
       bottom: 0,
       left: 0,
-      opacity: 0.75,
+      opacity: 0.35,
     }
   },
   titleText:{
+    fontFamily: 'Montserrat',
+    fontWeight: 700,
+    fontSize: '22px',
+    lineHeight: '26px',
+    textTransform: 'uppercase',
     color: "#fff",
     position: 'relative',
+    marginBottom: '32px'
   },
   subTitleText:{
+    fontFamily: 'Montserrat',
+    fontWeight: 500,
+    fontSize: '18px',
+    lineHeight: '32px',
+    textTransform: 'uppercase',
     color: "#fff",
     position: 'relative',
   },
@@ -43,9 +55,8 @@ export const PlanCard = ({title, subtitle, bgImg, shadowColor}) => {
     
     return (
       <Box className={classes.planContainer}>
-        <Box />
         <Box>
-          <Typography className={classes.titleText}>
+          <Typography className={classes.titleText} >
             {title}
           </Typography>
         </Box>

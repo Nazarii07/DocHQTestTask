@@ -2,9 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography} from '@material-ui/core';
 import { PlanCard } from '../../Cards/PlanCard';
-import bgFirst from '../../../public/workOne.png';
-import bgSecond from '../../../public/workTwo.png';
-import bgTheard from '../../../public/workThree.png';
+import { cardData } from '@/constans';
 
 const useStyles = makeStyles((theme) => ({
   sectionContainer:{
@@ -18,13 +16,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center'
   },
   title:{
+    fontFamily: 'Open_Sans',
+    fontWeight: 400,
+    fontSize: '18px',
+    lineHeight: '30px',
     color: "#fff",
-    marginBottom: "84px",
+    marginBottom: "44px",
     textAlign: 'center',
     maxWidth: '715px',
     fontSize: '18px'
   },
   subTitle:{
+    fontFamily: 'Montserrat',
+    fontWeight: 400,
+    fontSize: '26px',
+    lineHeight: '32px',
     color: "#fff",
     marginBottom: "107px"
   },
@@ -36,26 +42,19 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
-const cardData = [
-  {id: 1, title: "Plan 1", subtitle: "View work out >", bgImg: bgFirst, shadowColor: "#6AFBC6"},
-  {id: 2, title: "Plan 2", subtitle: "View work out >", bgImg: bgSecond, shadowColor: "#FFDE33"},
-  {id: 3, title: "Plan 3", subtitle: "View work out >", bgImg: bgTheard,  shadowColor: "#16D2EC"},
-]
-
-
 export const PlanSection = () => {
     const classes = useStyles();
     
     return (
       <Box className={classes.sectionContainer}>
         <Box>
-          <Typography className={classes.title}>
+          <Typography className={classes.title} variant="body1">
             Complete our simple fitness assesment and recieve your personalised workout plans to 
             get you one step closer to achieving your fitness goals.
           </Typography>
         </Box>
         <Box>
-          <Typography className={classes.subTitle}>
+          <Typography className={classes.subTitle} variant="body2">
             Take our quick & easy fitness quiz in just 2 mins!
           </Typography>
         </Box>
