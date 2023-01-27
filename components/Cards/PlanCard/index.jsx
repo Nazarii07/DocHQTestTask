@@ -33,6 +33,9 @@ const useStyles = makeStyles((theme) => ({
     '@media (max-width: 475px)': {
       width: '290px',
       justifyContent: 'center',
+    },
+    '@media (max-width: 340px)': {
+      width: '250px',
     }
   },
   titleText:{

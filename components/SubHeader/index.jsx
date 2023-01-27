@@ -24,7 +24,8 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     marginRight: "20px",
     '@media (max-width: 475px)': {
-      marginRight:'15px',
+      marginRight:'10px',
+      width: "80px",
     }
   },
   subMenuTextTitle:{
@@ -32,7 +33,10 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: 400,
     fontSize: '12px',
     lineHeight: '30px',
-    textTransform: 'uppercase'
+    textTransform: 'uppercase',
+    '@media (max-width: 475px)': {
+      fontSize: '10px',
+    }
   },
   menuDots:{
     width: "4px",
