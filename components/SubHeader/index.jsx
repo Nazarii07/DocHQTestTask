@@ -1,7 +1,7 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography} from '@material-ui/core';
-import { subHeaderData } from '@/constans';
+import { subHeaderData } from '@/constants';
 
 const useStyles = makeStyles((theme) => ({
   subMenuConainer:{
@@ -12,14 +12,20 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     color: '#ffffff',
     borderBottom: "2px solid #fff",
-    paddingRight:'20px'
+    paddingRight:'20px',
+    '@media (max-width: 475px)': {
+      paddingRight:'10px',
+    }
   },
   subMenuSection: {
     width: "100px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    marginRight: "20px"
+    marginRight: "20px",
+    '@media (max-width: 475px)': {
+      marginRight:'15px',
+    }
   },
   subMenuTextTitle:{
     fontFamily: 'Montserrat',

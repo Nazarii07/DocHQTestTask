@@ -2,7 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography} from '@material-ui/core';
 import { PlanCard } from '../../Cards/PlanCard';
-import { cardData } from '@/constans';
+import { cardData } from '@/constants';
 
 const useStyles = makeStyles((theme) => ({
   sectionContainer:{
@@ -13,10 +13,19 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '120px',
     display: 'flex',
     flexDirection: 'column',
-    alignItems: 'center'
+    alignItems: 'center',
+    '@media (max-width: 1341px)': {
+      paddingBottom: '60px',
+      paddingRight: '60px',
+      paddingLeft: '60px',
+    },
+    '@media (max-width: 475px)': {
+      paddingRight: '10px',
+      paddingLeft: '10px',
+    }
   },
   title:{
-    fontFamily: 'Open_Sans',
+    fontFamily: 'Open Sans',
     fontWeight: 400,
     fontSize: '18px',
     lineHeight: '30px',
@@ -32,13 +41,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: '26px',
     lineHeight: '32px',
     color: "#fff",
-    marginBottom: "107px"
+    marginBottom: "107px",
+    textAlign: 'center'
   },
   cardContainer:{
     width: "100%",
     display: 'flex',
     justifyContent: 'space-around',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    '@media (max-width: 1341px)': {
+      justifyContent: 'center',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
   }
 }));
 
@@ -48,13 +63,13 @@ export const PlanSection = () => {
     return (
       <Box className={classes.sectionContainer}>
         <Box>
-          <Typography className={classes.title} variant="body1">
+          <Typography className={classes.title} >
             Complete our simple fitness assesment and recieve your personalised workout plans to 
             get you one step closer to achieving your fitness goals.
           </Typography>
         </Box>
         <Box>
-          <Typography className={classes.subTitle} variant="body2">
+          <Typography className={classes.subTitle} >
             Take our quick & easy fitness quiz in just 2 mins!
           </Typography>
         </Box>

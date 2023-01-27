@@ -5,11 +5,15 @@ import Image from "next/image";
 
 const useStyles = makeStyles((theme) => ({
   cardContainer:{
-    position: 'relative'
+    position: 'relative',
+    '@media (max-width: 976px)': {
+      marginBottom: '30px'
+    }
   },
   mostPopulare:{
     position: 'absolute',
     top: '-38px',
+    right: '0px',
     border: '1px solid transparent',
     borderRadius: '50px 100px 0 50px',
     backgroundColor: '#222B35',
@@ -19,6 +23,13 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media (max-width: 976px)': {
+      width: '494px',
+      transform: 'rotate(90deg)',
+      top: '228px',
+      right: '-228px',
+      borderRadius: '0px 30px 0px 0px',
+    }
   },
   mostPopulareTitle:{
     fontFamily: 'Montserrat',
@@ -37,7 +48,13 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: '34px',
     color: props => props.isMostPopular ? '#000' : '#fff',
     border: '1px solid transparent',
-    borderRadius: '30px 0 30px 0'
+    borderRadius: '30px 0 30px 0',
+    '@media (max-width: 976px)': {
+      width: '400px',
+    },
+    '@media (max-width: 475px)': {
+      width: '290px',
+    }
 
   },
   title:{
@@ -55,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     
   },
   perTimeframe:{
-    fontFamily: 'Open_Sans',
+    fontFamily: 'Open Sans',
     fontWeight: 600,
     fontSize: '14px',
     lineHeight: '26px',
@@ -67,7 +84,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: '14px'
   },
   optionTitle:{
-    fontFamily: 'Open_Sans',
+    fontFamily: 'Open Sans',
     fontWeight: 600,
     fontSize: '13px',
     marginLeft: '11px'

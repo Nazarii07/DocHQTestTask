@@ -26,6 +26,13 @@ const useStyles = makeStyles((theme) => ({
       bottom: 0,
       left: 0,
       opacity: 0.35,
+    },
+    '@media (max-width: 1341px)': {
+      marginBottom: '30px',
+    },
+    '@media (max-width: 475px)': {
+      width: '290px',
+      justifyContent: 'center',
     }
   },
   titleText:{

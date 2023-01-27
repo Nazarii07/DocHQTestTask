@@ -30,7 +30,6 @@ export default function Home() {
             <CostSection/>
           </GridItem>
         </Grid>
-        
       </main>
     </>
   )
