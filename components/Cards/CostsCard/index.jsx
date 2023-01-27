@@ -2,8 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { Box, Typography, Button} from '@material-ui/core';
 import Image from "next/image";
-import subtractPopular from '../../../public/subtractPopular.png';
-import subtractBasic from '../../../public/subtract.png';
 
 const useStyles = makeStyles((theme) => ({
   cardContainer:{

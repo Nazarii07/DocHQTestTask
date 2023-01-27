@@ -4,26 +4,36 @@ import { Box, Typography} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   planContainer: {
+    position: 'relative',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
     alignItems: 'center',
     width: '355px',
     height: '203px',
-    border: '1px solid transparent',
-    backgroundImage:  props => `url(${props.bgImg.src})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    borderRadius: '0 20px 0 20px',
-    boxShadow: props => `10px 10px 1px ${props.shadowColor}`,
     paddingBottom: "25px",
     paddingTop: "25px",
+    borderRadius: '0 20px 0 20px',
+    boxShadow: props => `10px 10px 1px ${props.shadowColor}`,
+    '&::before': {
+      content: '""',
+      border: '1px solid transparent',
+      backgroundImage:  props => `url(${props.bgImg.src})`,
+      position: 'absolute',
+      top: 0,
+      right: 0,
+      bottom: 0,
+      left: 0,
+      opacity: 0.75,
+    }
   },
   titleText:{
-    color: "#fff"
+    color: "#fff",
+    position: 'relative',
   },
   subTitleText:{
-    color: "#fff"
+    color: "#fff",
+    position: 'relative',
   },
 }));
 

@@ -39,7 +39,7 @@ const useStyles = makeStyles((theme) => ({
 const cardData = [
   {id: 1, title: "Plan 1", subtitle: "View work out >", bgImg: bgFirst, shadowColor: "#6AFBC6"},
   {id: 2, title: "Plan 2", subtitle: "View work out >", bgImg: bgSecond, shadowColor: "#FFDE33"},
-  {id: 3, title: "Plan 3", subtitle: "View work out >", bgImg: bgTheard,  shadowColor: "#6AFBC6"},
+  {id: 3, title: "Plan 3", subtitle: "View work out >", bgImg: bgTheard,  shadowColor: "#16D2EC"},
 ]
 
 
